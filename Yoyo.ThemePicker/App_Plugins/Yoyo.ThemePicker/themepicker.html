@@ -1,6 +1,6 @@
 <div ng-controller="Yoyo.ThemePicker">
    <ul class="themepicker">
-		<li class="themepicker__item" ng-repeat="theme in themes">
+		<li class="themepicker__item" ng-repeat="theme in themes track by $index">
 			<button
 				class="umb-color-box themepicker__theme btn-reset"
 				ng-class="{'themepicker__theme--selected' : theme.value.label === model.value}"

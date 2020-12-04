@@ -1,4 +1,3 @@
-
 .themepicker {
 	list-style: none;
 	display: flex;
@@ -44,7 +43,7 @@
 }
 
 .themepicker-prevalue {
-	width: 500px
+	width: 500px;
 }
 
 .themepicker-prevalue__add {
@@ -52,5 +51,45 @@
 }
 
 .themepicker-prevalue__image {
+	position: relative;
+	overflow: hidden;
 	margin-right: 20px;
+}
+
+.themepicker-prevalue__image .umb-node-preview {
+	width: 100%;
+}
+
+.themepicker-prevalue .__control-actions {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: hsla(0, 0%, 100%, 0.9);
+	opacity: 0;
+	transition: opacity 0.12s;
+}
+
+.themepicker-prevalue .control-group:hover .__control-actions,
+.themepicker-prevalue .control-group:focus .__control-actions,
+.themepicker-prevalue .control-group:focus-within .__control-actions {
+	opacity: 1;
+}
+.themepicker-prevalue .__control-actions-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 44px;
+	width: 44px;
+	color: #1b264f;
+}
+.themepicker-prevalue .__control-actions-btn:hover {
+	color: #1b264f;
+}
+
+.themepicker-prevalue .umb-node-preview {
+	border-bottom: none;
 }
