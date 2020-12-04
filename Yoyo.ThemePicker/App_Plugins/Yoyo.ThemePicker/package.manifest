@@ -1,0 +1,32 @@
+{
+	 propertyEditors: [
+        {
+            alias: "Yoyo.ThemePicker",
+            name: "Theme picker",
+            icon: "icon-paint-roller",
+            group: "Theming",
+            editor: {
+                view: "~/App_Plugins/Yoyo.ThemePicker/themepicker.html",
+            },
+			prevalues: {
+				fields: [
+					{
+						label: "Themes",
+						description: "Add your theme with a name & a preview image",
+						key: "themes",
+						view: "~/App_Plugins/Yoyo.ThemePicker/themepicker.config.html"
+					}
+				]
+			}
+        }
+    ]
+    ,
+    // array of files we want to inject into the application on app_start
+    javascript: [
+        '~/App_Plugins/Yoyo.ThemePicker/themepicker.controller.js',
+        '~/App_Plugins/Yoyo.ThemePicker/themepicker.config.controller.js',
+    ],
+	css: [
+ 		'~/App_Plugins/Yoyo.ThemePicker/themepicker.css',
+	]
+}

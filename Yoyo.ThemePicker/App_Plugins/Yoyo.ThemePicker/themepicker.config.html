@@ -1,0 +1,59 @@
+<div class="umb-property-editor umb-prevalues-multivalues themepicker-prevalue" ng-controller="Yoyo.ThemeConfigController">
+    <div class="control-group umb-prevalues-multivalues__add">
+        <div class="umb-prevalues-multivalues__left themepicker-prevalue__add">
+			<div class="umb-property-editor umb-contentpicker themepicker-prevalue__image">
+				<div ng-model="newItem.image">
+					<umb-node-preview
+						ng-repeat="node in newItem.image"
+						icon="node.icon"
+						name="node.name"
+						published="node.published"
+						description="node.path"
+						sortable="sortable"
+						allow-remove="allowRemove"
+						allow-edit="allowEdit"
+						on-remove="removeImage($index)"
+						on-edit="openTreePicker()">
+					</umb-node-preview>
+				</div>
+
+				<button ng-show="model.config.multiPicker === true || newItem.image.length === 0"
+					type="button"
+					class="btn-reset umb-node-preview-add"
+					ng-click="openTreePicker()"
+					prevent-default>
+					<localize key="general_add">Add image</localize>
+				</button>
+			</div>
+
+            <input overlay-submit-on-enter="false" name="newItem" focus-when="{{focusOnNew}}" ng-keydown="createNew($event)" type="text" ng-model="newItem.label" val-highlight="{{hasError}}" />
+        </div>
+        <div class="umb-prevalues-multivalues__right">
+            <button class="btn btn-info" ng-click="add($event)" ng-disabled="newItem.image.length === 0 || (!newItem.label || newItem.label.length === 0)"><localize key="general_add">Add</localize></button>
+        </div>
+    </div>
+    <div ui-sortable="sortableOptions">
+        <div class="control-group umb-prevalues-multivalues__listitem " ng-repeat="item in model.value">
+            <i class="icon icon-navigation handle" aria-hidden="true"></i>
+            <div class="umb-prevalues-multivalues__left themepicker-prevalue__add">
+				<umb-node-preview
+					class="themepicker-prevalue__image"
+					ng-repeat="node in item.value.image"
+					icon="node.icon"
+					name="node.name"
+					published="node.published"
+					description="node.path"
+					sortable="sortable"
+					allow-remove="false"
+					allow-edit="false"
+					on-edit="openTreePicker()">
+				</umb-node-preview>
+
+                <input type="text" ng-model="item.value.label" val-server="item_{{$index}}" required />
+            </div>
+            <div class="umb-prevalues-multivalues__right">
+                <button class="umb-node-preview__action umb-node-preview__action--red" ng-click="remove(item, $event)"><localize key="general_remove">Remove</localize></button>
+            </div>
+        </div>
+    </div>
+</div>
