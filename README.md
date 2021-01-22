@@ -4,6 +4,8 @@ An Umbraco package that create a the theme picker property editor
 
 ## Usage
 
+This data type will return the string value of the selected theme (it will be and empty string is no theme is selected).
+
 ## Contribution Guidelines
 
 If you'd like to contribute to this package, you'll first want to get in install local. The following steps will help you get set up.
