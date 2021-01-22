@@ -1,17 +1,28 @@
 <div ng-controller="Yoyo.ThemePicker">
-   <ul class="themepicker">
-		<li class="themepicker__item" ng-repeat="theme in themes track by $index">
+	<ul class="themepicker">
+		<li
+			class="themepicker__item"
+			ng-repeat="theme in themes track by $index"
+		>
 			<button
 				class="umb-color-box themepicker__theme btn-reset"
 				ng-class="{'themepicker__theme--selected' : theme.value.label === model.value}"
 				ng-click="selectTheme(theme.value)"
-				type="button">
+				type="button"
+			>
+				<img
+					class="themepicker__image"
+					ng-src="{{theme.value.image}}"
+					alt=""
+				/>
 				<span class="themepicker__label">
 					{{theme.value.label}}
-					<span class="themepicker__check icon-check" ng-if="theme.value.label === model.value"></span>
+					<span
+						class="themepicker__check icon-check"
+						ng-if="theme.value.label === model.value"
+					></span>
 				</span>
-				<img class="themepicker__image" ng-src="{{theme.thumbnail}}" alt="" />
 			</button>
 		</li>
-   </ul>
+	</ul>
 </div>
