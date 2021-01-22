@@ -28,6 +28,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Website\", "{C22
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "65182"
+		SlnRelativePath = "Website\"
 	EndProjectSection
 EndProject
 Global
@@ -41,7 +42,6 @@ Global
 		{A32F6947-393A-4E3F-86A9-A4D6B948AC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32F6947-393A-4E3F-86A9-A4D6B948AC51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2290A2C-6906-46A6-AB30-E904EB6A14E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2290A2C-6906-46A6-AB30-E904EB6A14E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2290A2C-6906-46A6-AB30-E904EB6A14E7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2290A2C-6906-46A6-AB30-E904EB6A14E7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
