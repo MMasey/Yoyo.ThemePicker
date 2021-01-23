@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+	<metadata>
+		<id>Yoyo.ThemePicker</id>
+		<version>1.0.1</version>
+		<title>Yoyo.ThemePicker</title>
+		<authors>Mike Masey</authors>
+		<owners>Mike Masey</owners>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/MMasey/Yoyo.ThemePicker</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
+		This package will create a new data type called Theme picker. It allows you to create a assign a label to any image found in the file system in umbraco.
+
+		The purpose of the theme picker is to imrove the experience content editors have when select theme options for either components or whole pages. This is Umbraco after all, how you use it is up to you.
+
+		The data type returns the label value of the selected theme as a string. It is compatable with models builder too.</description>
+		<summary>A new theme picker data type for Umbraco 8.</summary>
+		<copyright>Copyright 2021</copyright>
+		<tags>umbraco .net c# datatype theme themepicker yoyo</tags>
+		<dependencies>
+			<group targetFramework=".NETFramework4.7.2">
+				<dependency id="UmbracoCms.Core" version="0.0.0" />
+			</group>
+		</dependencies>
+		<icon>yoyo-theme-picker-icon.png</icon>
+	</metadata>
+	<files>
+		<file src="..\Yoyo.ThemePicker\App_Plugins\Yoyo.ThemePicker\**\*.*" target="content\App_Plugins\Yoyo.ThemePicker" />
+		<file src="..\Yoyo.ThemePicker\bin\Yoyo.ThemePicker.dll" target="lib\net472\" />
+		<file src="yoyo-theme-picker-icon.png" target="" />
+	</files>
+</package>
