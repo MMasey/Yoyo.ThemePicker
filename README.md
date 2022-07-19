@@ -1,6 +1,6 @@
 # Yoyo.ThemePicker
 
-An Umbraco package that create a the theme picker property editor. Compatible with Umbraco v10
+An Umbraco package that create a the theme picker property editor. Compatible with Umbraco v9
 
 ## Usage
 
