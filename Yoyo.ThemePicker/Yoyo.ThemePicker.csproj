@@ -2,13 +2,24 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>Yoyo.ThemePicker</Product>
         <PackageId>Yoyo.ThemePicker</PackageId>
         <Title>Yoyo.ThemePicker</Title>
-        <Description>...</Description>
-        <Product>...</Product>
-        <PackageTags>umbraco plugin package</PackageTags>
+        <Description>This package will create a new data type called Theme picker. It allows you to create a assign a label to any image found in the file system in umbraco.
+
+The purpose of the theme picker is to imrove the experience content editors have when select theme options for either components or whole pages. This is Umbraco after all, how you use it is up to you.
+
+The data type returns the label value of the selected theme as a string. It is compatable with models builder too.</Description>
+        <Product>Yoyo.ThemePicker</Product>
+        <PackageTags>umbraco plugin package .net c# datatype theme themepicker yoyo theme property</PackageTags>
         <RootNamespace>Yoyo.ThemePicker</RootNamespace>
+        <Copyright>Copyright Mike Masey 2022</Copyright>
+        <PackageProjectUrl>https://github.com/MMasey/Yoyo.ThemePicker</PackageProjectUrl>
+        <PackageIcon>yoyo-theme-picker-icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/MMasey/Yoyo.ThemePicker</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <AssemblyVersion>2.0.0</AssemblyVersion>
+        <FileVersion>2.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,5 +36,16 @@
 
     <ItemGroup>
       <Folder Include="App_Plugins\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\nuget\yoyo-theme-picker-icon.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 </Project>
