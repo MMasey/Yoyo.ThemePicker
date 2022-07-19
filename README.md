@@ -21,6 +21,11 @@ More information on creating and deploying the package to nuget can be found at 
 
 You can test with either your own images, or by using the image found in the `example-media` folder. In order to test all you need to do is add them somewhere inside the `Website` folder. Once that's done you'll be able to select them via the Theme picker when configuring it.
 
+### Test site login credentials
+
+Username: test@test.com
+Password: testtesttest
+
 ### Committing
 
 Before you make your first commit, make sure you install the npm modules for this package by running `npm i`. This will configure some rules around commit messages that will help to keep things consistent.

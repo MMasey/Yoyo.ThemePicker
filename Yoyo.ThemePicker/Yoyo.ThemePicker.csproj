@@ -11,7 +11,7 @@ The purpose of the theme picker is to imrove the experience content editors have
 
 The data type returns the label value of the selected theme as a string. It is compatable with models builder too.</Description>
     <PackageTags>umbraco plugin package .net c# datatype theme themepicker yoyo theme property</PackageTags>
-	<Version>2.0.0</Version>
+	<Version>3.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
