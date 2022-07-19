@@ -1,52 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ContentTargetFolders>.</ContentTargetFolders>
-    <Product>Yoyo.ThemePicker</Product>
-    <PackageId>Yoyo.ThemePicker</PackageId>
-    <Title>Yoyo.ThemePicker</Title>
-    <Description>This package will create a new data type called Theme picker. It allows you to create a assign a label to any image found in the file system in umbraco.
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <Product>Yoyo.ThemePicker</Product>
+        <PackageId>Yoyo.ThemePicker</PackageId>
+        <Title>Yoyo.ThemePicker</Title>
+        <Description>...</Description>
+        <Product>...</Product>
+        <PackageTags>umbraco plugin package</PackageTags>
+        <RootNamespace>Yoyo.ThemePicker</RootNamespace>
+    </PropertyGroup>
 
-The purpose of the theme picker is to imrove the experience content editors have when select theme options for either components or whole pages. This is Umbraco after all, how you use it is up to you.
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.5.2" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.5.2" />
+    </ItemGroup>
 
-The data type returns the label value of the selected theme as a string. It is compatable with models builder too.</Description>
-    <PackageTags>umbraco plugin package .net c# datatype theme themepicker yoyo theme property</PackageTags>
-	<Version>2.0.0</Version>
-  </PropertyGroup>
+    <ItemGroup>
+        <None Include="build\**\*.*">
+            <Pack>true</Pack>
+            <PackagePath>buildTransitive</PackagePath>
+        </None>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.1" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="App_Plugins\Yoyo.ThemePicker\**">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-    <None Include="build\**">
-      <Pack>true</Pack>
-      <PackagePath>buildTransitive</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\nuget\yoyo-theme-picker-icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <PropertyGroup>
-    <Copyright>Copyright Mike Masey 2022</Copyright>
-    <PackageProjectUrl>https://github.com/MMasey/Yoyo.ThemePicker</PackageProjectUrl>
-    <PackageIcon>yoyo-theme-picker-icon.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/MMasey/Yoyo.ThemePicker</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
+    <ItemGroup>
+      <Folder Include="App_Plugins\" />
+    </ItemGroup>
 </Project>

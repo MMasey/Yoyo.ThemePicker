@@ -1,4 +1,5 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
     <PropertyGroup>
         <YoyoThemePickerContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Yoyo.ThemePicker\**\*.*</YoyoThemePickerContentFilesPath>
     </PropertyGroup>
@@ -7,15 +8,16 @@
         <ItemGroup>
             <YoyoThemePickerContentFiles Include="$(YoyoThemePickerContentFilesPath)" />
         </ItemGroup>
-        <Message Text="Copying Yoyo.ThemePicker files: $(YoyoThemePickerContentFilesPath) - #@(YoyoThemePickerContentFiles->Count()) files" Importance="high" />
+        <Message Text="Copying Yoyo.ThemePicker files: $(YoyoThemePickerContentFilesPath) - #@(YoyoThemePickerContentFiles->Count()) files"  Importance="high" />
         <Copy SourceFiles="@(YoyoThemePickerContentFiles)" DestinationFiles="@(YoyoThemePickerContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Yoyo.ThemePicker\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     </Target>
-    
+
     <Target Name="ClearYoyoThemePickerAssets" BeforeTargets="Clean">
         <ItemGroup>
             <YoyoThemePickerDir Include="$(MSBuildProjectDirectory)\App_Plugins\Yoyo.ThemePicker\" />
         </ItemGroup>
-        <Message Text="Clear old Yoyo.ThemePicker data" Importance="high" />
-        <RemoveDir Directories="@(YoyoThemePickerDir)" />
+        <Message Text="Clear old Yoyo.ThemePicker data"  Importance="high" />
+        <RemoveDir Directories="@(YoyoThemePickerDir)"  />
     </Target>
+
 </Project>
