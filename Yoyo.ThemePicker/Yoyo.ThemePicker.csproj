@@ -18,7 +18,7 @@ The data type returns the label value of the selected theme as a string. It is c
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryUrl>https://github.com/MMasey/Yoyo.ThemePicker</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <Version>2.0.1</Version>
+        <Version>2.0.4</Version>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,14 +27,14 @@ The data type returns the label value of the selected theme as a string. It is c
     </ItemGroup>
 
     <ItemGroup>
+		<Content Include="App_Plugins\Yoyo.ThemePicker\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
         <None Include="build\**\*.*">
             <Pack>true</Pack>
             <PackagePath>buildTransitive</PackagePath>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="App_Plugins\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,5 +46,6 @@ The data type returns the label value of the selected theme as a string. It is c
         <Pack>True</Pack>
         <PackagePath>\</PackagePath>
       </None>
+	  <None Include="../LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 </Project>
