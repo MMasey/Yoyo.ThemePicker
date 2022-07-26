@@ -1,10 +1,12 @@
 ﻿{
-	 propertyEditors: [
+	"version": "2.0.5",
+	"allowPackageTelemetry": true,
+	"name": "Yoyo.ThemePicker",
+	"bundleOptions":"None",
+	propertyEditors: [
         {
+			name: "Yoyo Theme picker",
             alias: "Yoyo.ThemePicker",
-			"version": "2.0.4",
-    		"allowPackageTelemetry": true,
-            name: "Theme picker",
             icon: "icon-paint-roller",
             group: "Theming",
             editor: {
@@ -21,9 +23,7 @@
 				]
 			}
         }
-    ]
-    ,
-    // array of files we want to inject into the application on app_start
+    ],
     javascript: [
         '~/App_Plugins/Yoyo.ThemePicker/themepicker.controller.js',
         '~/App_Plugins/Yoyo.ThemePicker/themepicker.config.controller.js',
